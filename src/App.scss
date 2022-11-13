@@ -1,0 +1,160 @@
+#red {
+  --HeaderColor: rgb(62, 3, 3);
+  --AnonymousFontColor: red;
+  --ButtonClose-Open: red;
+  --FooterButtonColor: red;
+  --SubmitBTN: rgb(123, 6, 6);
+  --BorderColors: 3px solid red;
+  --HeaderBoxShadow: 0px 0px 13px 10px rgb(109, 12, 12);
+  --BoxShadowsOnSections: 0px 0px 6px 6px rgb(62, 11, 11);
+  --SkillTitlesColor: rgb(243, 4, 4);
+  --SkillsIconsShadowBox: 0px 0px 7px 7px #4b0107;
+  --SkillsLineColor: rgb(142, 13, 13);
+  --SkillsLinePercentage: rgb(149, 1, 1);
+  --InsideBoxShadows: 0px 0px 12px 4px rgb(159, 0, 0);
+  --HoverBoxShadowsLight: 0px 0px 12px 4px rgb(185, 0, 0);
+  --BoxShadowsError404: 0px 0px 16px 18px rgb(87, 2, 2);
+  --FontColor: red;
+  --BGImageMidContent2: url(./Components/Main-Sections/Mid-Content2/images/edited-CoverImage.jpg);
+  --BGImageBottomContent: url(./Components/Main-Sections/Bottom-Content/images/BottomCroppedRed.jpg);
+  --GradientBGC: radial-gradient(
+    circle,
+    #4a0707,
+    #3a090d,
+    #2a0a0e,
+    #1b050a,
+    #000000
+  );
+}
+
+#green {
+  --HeaderColor: rgb(1, 24, 0);
+  --AnonymousFontColor: rgb(7, 202, 0);
+  --ButtonClose-Open: green;
+  --FooterButtonColor: green;
+  --SubmitBTN: rgb(0, 105, 0);
+  --BorderColors: 3px solid green;
+  --HeaderBoxShadow: 0px 0px 13px 10px rgb(0, 70, 9);
+  --BoxShadowsOnSections: 0px 0px 6px 6px rgb(0, 79, 11);
+  --SkillTitlesColor: rgb(3, 141, 24);
+  --SkillsIconsShadowBox: 0px 0px 7px 7px #005100;
+  --SkillsLineColor: rgb(3, 141, 10);
+  --SkillsLinePercentage: rgb(0, 96, 0);
+  --InsideBoxShadows: 0px 0px 12px 4px rgb(0, 136, 14);
+  --HoverBoxShadowsLight: 0px 0px 12px 4px rgb(2, 188, 45);
+  --BoxShadowsError404: 0px 0px 16px 18px rgb(0, 59, 9);
+  --FontColor: green;
+  --BGImageMidContent2: url(./Components/Main-Sections/Mid-Content2/images/edited-CoverImageGreen.jpg);
+  --BGImageBottomContent: url(./Components/Main-Sections/Bottom-Content/images/BottomCroppedGreen.jpg);
+  --GradientBGC: linear-gradient(
+    to right,
+    #122110,
+    #132d11,
+    #123a11,
+    #11470f,
+    #0d550b,
+    #0d560a,
+    #0c5809,
+    #0c5908,
+    #0f4f0c,
+    #11450f,
+    #133b10,
+    #133211
+  );
+}
+
+#blue {
+  --HeaderColor: rgb(2, 2, 32);
+  --AnonymousFontColor: blue;
+  --ButtonClose-Open: blue;
+  --FooterButtonColor: blue;
+  --SubmitBTN: rgb(0, 0, 114);
+  --BorderColors: 3px solid blue;
+  --HeaderBoxShadow: 0px 0px 13px 10px rgb(6, 7, 88);
+  --BoxShadowsOnSections: 0px 0px 6px 6px rgb(9, 10, 67);
+  --BoxShadowsOnSections: 0px 0px 6px 6px rgb(9, 10, 67);
+  --SkillTitlesColor: rgb(22, 61, 233);
+  --SkillsIconsShadowBox: 0px 0px 7px 7px #030b5e;
+  --SkillsLineColor: rgb(0, 7, 81);
+  --SkillsLinePercentage: rgb(0, 11, 137);
+  --InsideBoxShadows: 0px 0px 12px 4px rgb(1, 15, 105);
+  --HoverBoxShadowsLight: 0px 0px 12px 4px rgb(0, 20, 153);
+  --BoxShadowsError404: 0px 0px 16px 18px rgb(9, 10, 67);
+  --FontColor: blue;
+  --BGImageMidContent2: url(./Components/Main-Sections/Mid-Content2/images/edited-CoverImageBlue.jpg);
+  --BGImageBottomContent: url(./Components/Main-Sections/Bottom-Content/images/BottomCroppedBlue.jpg);
+  --GradientBGC: linear-gradient(
+    to right,
+    #0d0d0d,
+    #13121d,
+    #15162c,
+    #15193b,
+    #121d4b,
+    #121d4b,
+    #131e4c,
+    #131e4c,
+    #171a3c,
+    #17172d,
+    #15131e,
+    #0f0f0f
+  );
+}
+
+@mixin frames($backgroundImg) {
+  background-image: $backgroundImg;
+  position: fixed;
+  z-index: 2000;
+  background-size: 100% 100%;
+}
+
+.HeadDiv {
+  width: 100vw;
+  height: 100vh;
+}
+
+.frame-right {
+  @include frames($backgroundImg: url(./frames/border-left-right.png));
+  transform: rotate(180deg);
+  height: 100vh;
+  width: 40px;
+  top: 0;
+  right: 0;
+}
+
+.frame-left {
+  @include frames($backgroundImg: url(./frames/border-left-right.png));
+  height: 100%;
+  width: 40px;
+  top: 0;
+  left: 0;
+}
+
+.frame-top {
+  @include frames($backgroundImg: url(./frames/border-top-bottom.png));
+  transform: rotate(180deg);
+  height: 30px;
+  width: 100%;
+  top: 0;
+}
+
+.frame-bottom {
+  @include frames($backgroundImg: url(./frames/border-top-bottom.png));
+  height: 40px;
+  width: 100%;
+  bottom: 0;
+}
+
+.bgvid {
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+  .bg-vid {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -100;
+  }
+}

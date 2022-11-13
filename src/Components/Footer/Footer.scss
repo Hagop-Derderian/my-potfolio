@@ -1,0 +1,57 @@
+
+.Footer-Main {
+  width: 100%;
+  margin-top: 100px;
+  background-color: rgb(24, 23, 23);
+  height: 120px;
+  opacity: 0.9;
+  box-shadow: var(--BoxShadowsOnSections);
+  background-image: var(--GradientBGC);
+  .align-items {
+    margin: 30px 30px;
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+
+    .Terms-div {
+      ul {
+        display: flex;
+        gap: 15px;
+
+        li {
+          list-style: none;
+          a {
+            text-decoration: none;
+            color: grey;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    .MadeBy-div {
+      color: grey;
+      font-size: 20px;
+      margin: auto;
+    }
+    .GoUp-div {
+      margin: 30px auto;
+      button {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        border-radius: 40%;
+        padding-right: 10px;
+        background-color: var( --FooterButtonColor);
+        box-shadow: var(--InsideBoxShadows);
+        .iconUp {
+          width: 40px;
+          height: 40px;
+          position: absolute;
+          left: 3px;
+          top: 2px;
+        }
+      }
+    }
+  }
+}

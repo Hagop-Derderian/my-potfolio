@@ -1,0 +1,175 @@
+$Primary: #0e0e0e;
+$FontColor: #b8b6b6;
+$FontHover: #de8721;
+
+@mixin font($size: 22px, $color: #b8b6b6) {
+  font-size: $size;
+  color: $color;
+}
+
+@mixin flex($justify: space-around, $display: flex, $direction: row) {
+  justify-content: $justify;
+  display: $display;
+  flex-direction: $direction;
+}
+
+.Header-mainDiv {
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  z-index: 1999;
+  box-shadow: var(--HeaderBoxShadow);
+  background-color: var(--HeaderColor);
+  .Header-insideDiv {
+    @include flex();
+    justify-content: space-around;
+    .left-div {
+      display: flex;
+      height: 100px;
+      align-items: center;
+      gap: 10px;
+      h2 {
+        color: white;
+        span {
+          color: var(--AnonymousFontColor);
+        }
+      }
+    }
+  }
+  .mid-div {
+    @include flex();
+    align-items: center;
+    justify-content: space-around;
+    height: 100px;
+    width: 40%;
+    .div-nav {
+      width: 100%;
+      height: 100%;
+      nav {
+        width: 100%;
+        height: 100%;
+        li {
+          padding: 0px 10px;
+          border-right: 2px solid rgb(47, 44, 44);
+          border-left: 2px solid rgb(47, 44, 44);
+          list-style: none;
+        }
+      }
+    }
+    img {
+      position: relative;
+      width: 500px;
+      height: 100px;
+      border-radius: 50px;
+    }
+    .inside-frame {
+      position: absolute;
+      display: flex;
+      gap: 40px;
+      a {
+        text-decoration: none;
+        @include font();
+        text-shadow: 1px 1px 16px rgb(163, 157, 157);
+        &:hover {
+          color: $FontHover;
+
+          height: 25px;
+          text-shadow: 1px 1px 13px rgb(216, 73, 29);
+        }
+      }
+    }
+  }
+  .right-div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 15%;
+    height: 100px;
+    .Opened-div {
+      margin: 0 auto;
+      display: flex;
+      gap: 10px;
+      background-color: #1f1717;
+      height: 50px;
+      align-items: center;
+      border-radius: 10px;
+      box-shadow: var(--InsideBoxShadows);
+      padding: 5px 5px;
+      .Opened-red {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: rgb(200, 1, 1);
+        color: rgb(228, 223, 223);
+        &:active {
+          box-shadow: 0px 0px 15px 2px rgb(144, 3, 3);
+        }
+      }
+      .Button-Absolute {
+        margin: 0 auto;
+        width: 25px;
+        background-color: #181818;
+        height: 25px;
+        border-radius: 50%;
+        border: 2px solid rgb(28, 28, 28);
+        box-shadow: 0px 0px 5px 1px black;
+      }
+      .Opened-blue {
+        width: 50px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: rgb(21, 18, 175);
+        color: rgb(228, 223, 223);
+        &:active {
+          box-shadow: 0px 0px 15px 2px rgb(3, 8, 144);
+        }
+      }
+      .Opened-green {
+        width: 50px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: rgb(8, 110, 18);
+        color: rgb(228, 223, 223);
+        &:active {
+          box-shadow: 0px 0px 15px 2px rgb(5, 144, 2);
+        }
+      }
+      .Button-to-close {
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        margin: 0 auto;
+        cursor: pointer;
+        background-color: var(--ButtonClose-Open);
+        box-shadow: var(--InsideBoxShadows);
+      }
+    }
+    .Button-to-open {
+      display: flex;
+      position: absolute;
+      right: 0;
+      width: 50px;
+      height: 50px;
+      padding-left: 14px;
+      border-radius: 50%;
+      border: 0;
+      background-color: var(--ButtonClose-Open);
+      box-shadow: var(--InsideBoxShadows);
+      cursor: pointer;
+      &:focus {
+        transform: scale(1.2);
+      }
+    }
+    .Arrow-icon {
+      width: 30px;
+      height: 30px;
+      margin: auto;
+      // color: #b20000;
+      color: rgb(29, 27, 27);
+    }
+  }
+}

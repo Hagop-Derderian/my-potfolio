@@ -1,0 +1,161 @@
+@mixin bgimage($pickImg, $pickPos: center) {
+  background-image: $pickImg;
+  background-position: $pickPos;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Main-ContactsDiv {
+  width: 100%;
+  height: 100%;
+  margin-top: 150px;
+  .First-Bg-pic {
+    @include bgimage($pickImg: url(./Images/kcITv5.webp), $pickPos: center);
+    width: 100%;
+    height: 700px;
+    opacity: 0.8;
+  }
+  .inside-div {
+    margin-top: 100px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    @include bgimage($pickImg: var(--BGImageBottomContent), $pickPos: left);
+    opacity: 0.7;
+    height: 900px;
+
+    .bottom-div-content {
+      position: absolute;
+      left: 100px;
+      height: 600px;
+      width: 800px;
+      border-radius: 10px;
+      margin-top: 120px;
+      padding: 20px 20px;
+      background-color: rgba(25, 17, 17, 0.6);
+      box-shadow: var(--InsideBoxShadows);
+      h1 {
+        font-size: 60px;
+        text-shadow: 1px 3px 5px;
+        margin: 0;
+        text-align: center;
+        color: rgb(233, 232, 232);
+      }
+      .div-form {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        form {
+          width: 100%;
+          height: 300px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          font-family: "Marcellus SC";
+          color: white;
+          .ToFill-div {
+            height: 200px;
+            text-align: center;
+            .LabelForName {
+              display: flex;
+              flex-direction: column;
+              font-size: 30px;
+              color: rgb(233, 232, 232);
+              text-shadow: 1px 3px 5px;
+              font-weight: 600;
+              .InputForName {
+                width: 300px;
+                height: 30px;
+                border-radius: 5px;
+              }
+            }
+            .LabelForLastName {
+              display: flex;
+              flex-direction: column;
+              font-size: 30px;
+              color: rgb(233, 232, 232);
+              text-shadow: 1px 3px 5px;
+              font-weight: 600;
+              .InputForLastName {
+                width: 300px;
+                height: 30px;
+                border-radius: 5px;
+              }
+            }
+          }
+
+          .ForEmail {
+            border-right: 1px solid rgb(143, 115, 108);
+            outline: none;
+            border: none;
+            border-radius: 4px;
+            height: 50px;
+            width: 500px;
+            padding-left: 10px;
+            margin-top: 20px;
+            font-size: 20px;
+            font-family: "Marcellus SC";
+            box-shadow: var(--InsideBoxShadows);
+            &:hover {
+              box-shadow: var(--HoverBoxShadowsLight);
+            }
+            &::placeholder {
+              color: rgb(48, 46, 46);
+              font-weight: 600;
+            }
+          }
+          button {
+            width: 150px;
+            border-radius: 10px;
+            height: 60px;
+            background-color: darkred;
+            color: rgb(199, 199, 199);
+            font-size: 20px;
+            border-left: none;
+            cursor: pointer;
+            background-color: var(--SubmitBTN);
+            box-shadow: var(--InsideBoxShadows);
+          }
+          .TextArea-div {
+            margin: auto;
+            .LabelForTextArea {
+              margin-top: 20px;
+              font-size: 30px;
+              display: flex;
+              text-align: center;
+              flex-direction: column;
+              gap: 10px;
+              .Textarea {
+                width: 400px;
+                background-color: rgb(180, 180, 180);
+                box-shadow: 0px 0px 10px 5px rgb(192, 192, 192);
+                text-align: left;
+                border: 0;
+                &:focus {
+                  width: 600px;
+                  &::placeholder {
+                    padding-top: 60px;
+                    padding-left: 150px;
+                  }
+                }
+                &::placeholder {
+                  padding-top: 60px;
+                  padding-left: 150px;
+                }
+              }
+            }
+          }
+          .LabelForTextArea {
+            margin-top: 20px;
+            font-size: 30px;
+
+            .Textarea {
+              width: 400px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
