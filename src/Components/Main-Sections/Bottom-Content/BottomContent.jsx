@@ -1,13 +1,7 @@
 import React, { useEffect } from "react";
 import "./BottomContent.scss";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 function BottomContent() {
-  useEffect(() => {
-    AOS.init();
-    AOS.refresh();
-  }, []);
   return (
     <div className="Bottom-Content">
       <div data-aos="zoom-in" className="inside-div">

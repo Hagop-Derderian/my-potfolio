@@ -1,22 +1,25 @@
 #red {
-  --HeaderColor: rgb(62, 3, 3);
-  --AnonymousFontColor: red;
+  --HeaderColor: rgb(53, 0, 0);
+  --AnonymousFontColor: rgb(255, 0, 0);
+  --RememberBeNice: rgb(143, 0, 0);
   --ButtonClose-Open: red;
   --FooterButtonColor: red;
   --SubmitBTN: rgb(123, 6, 6);
   --BorderColors: 3px solid red;
   --HeaderBoxShadow: 0px 0px 13px 10px rgb(109, 12, 12);
   --BoxShadowsOnSections: 0px 0px 6px 6px rgb(62, 11, 11);
+  --ProgressbarCircleBoxShadow: drop-shadow(0 0 5px rgb(154, 154, 154));
   --SkillTitlesColor: rgb(243, 4, 4);
   --SkillsIconsShadowBox: 0px 0px 7px 7px #4b0107;
   --SkillsLineColor: rgb(142, 13, 13);
-  --SkillsLinePercentage: rgb(149, 1, 1);
+  --SkillsLinePercentage: rgb(102, 0, 0);
   --InsideBoxShadows: 0px 0px 12px 4px rgb(159, 0, 0);
   --HoverBoxShadowsLight: 0px 0px 12px 4px rgb(185, 0, 0);
   --BoxShadowsError404: 0px 0px 16px 18px rgb(87, 2, 2);
   --FontColor: red;
+  --FontTextShadow: 1px 1px 5px rgb(255, 0, 0);
   --BGImageMidContent2: url(./Components/Main-Sections/Mid-Content2/images/edited-CoverImage.jpg);
-  --BGImageBottomContent: url(./Components/Main-Sections/Bottom-Content/images/BottomCroppedRed.jpg);
+  --BGImageBottomContent: url(./Router/MyContacts/Images/FlippedCroppedRed.jpg);
   --GradientBGC: radial-gradient(
     circle,
     #4a0707,
@@ -28,14 +31,16 @@
 }
 
 #green {
-  --HeaderColor: rgb(1, 24, 0);
+  --HeaderColor: rgb(1, 22, 0);
   --AnonymousFontColor: rgb(7, 202, 0);
+  --RememberBeNice: rgb(0, 206, 7);
   --ButtonClose-Open: green;
   --FooterButtonColor: green;
   --SubmitBTN: rgb(0, 105, 0);
   --BorderColors: 3px solid green;
   --HeaderBoxShadow: 0px 0px 13px 10px rgb(0, 70, 9);
   --BoxShadowsOnSections: 0px 0px 6px 6px rgb(0, 79, 11);
+  --ProgressbarCircleBoxShadow: drop-shadow(0 0 5px rgb(154, 154, 154));
   --SkillTitlesColor: rgb(3, 141, 24);
   --SkillsIconsShadowBox: 0px 0px 7px 7px #005100;
   --SkillsLineColor: rgb(3, 141, 10);
@@ -43,9 +48,10 @@
   --InsideBoxShadows: 0px 0px 12px 4px rgb(0, 136, 14);
   --HoverBoxShadowsLight: 0px 0px 12px 4px rgb(2, 188, 45);
   --BoxShadowsError404: 0px 0px 16px 18px rgb(0, 59, 9);
-  --FontColor: green;
+  --FontColor: rgb(0, 192, 0);
+  --FontTextShadow: 1px 1px 8px green;
   --BGImageMidContent2: url(./Components/Main-Sections/Mid-Content2/images/edited-CoverImageGreen.jpg);
-  --BGImageBottomContent: url(./Components/Main-Sections/Bottom-Content/images/BottomCroppedGreen.jpg);
+  --BGImageBottomContent: url(./Router/MyContacts/Images/FlippedCroppedGreen.jpg);
   --GradientBGC: linear-gradient(
     to right,
     #122110,
@@ -66,23 +72,26 @@
 #blue {
   --HeaderColor: rgb(2, 2, 32);
   --AnonymousFontColor: blue;
+  --RememberBeNice: rgb(0, 18, 177);
   --ButtonClose-Open: blue;
   --FooterButtonColor: blue;
   --SubmitBTN: rgb(0, 0, 114);
   --BorderColors: 3px solid blue;
+  --textShadow: 2px 2px 2px rgb(37, 37, 210);
   --HeaderBoxShadow: 0px 0px 13px 10px rgb(6, 7, 88);
   --BoxShadowsOnSections: 0px 0px 6px 6px rgb(9, 10, 67);
-  --BoxShadowsOnSections: 0px 0px 6px 6px rgb(9, 10, 67);
+  --ProgressbarCircleBoxShadow: drop-shadow(0 0 5px rgb(154, 154, 154));
   --SkillTitlesColor: rgb(22, 61, 233);
   --SkillsIconsShadowBox: 0px 0px 7px 7px #030b5e;
-  --SkillsLineColor: rgb(0, 7, 81);
+  --SkillsLineColor: rgb(0, 9, 108);
   --SkillsLinePercentage: rgb(0, 11, 137);
   --InsideBoxShadows: 0px 0px 12px 4px rgb(1, 15, 105);
   --HoverBoxShadowsLight: 0px 0px 12px 4px rgb(0, 20, 153);
   --BoxShadowsError404: 0px 0px 16px 18px rgb(9, 10, 67);
-  --FontColor: blue;
+  --FontColor: rgb(0, 68, 255);
+  --FontTextShadow: 2px 2px 8px blue;
   --BGImageMidContent2: url(./Components/Main-Sections/Mid-Content2/images/edited-CoverImageBlue.jpg);
-  --BGImageBottomContent: url(./Components/Main-Sections/Bottom-Content/images/BottomCroppedBlue.jpg);
+  --BGImageBottomContent: url(./Router/MyContacts/Images/FlippedCroppedBlue.jpg);
   --GradientBGC: linear-gradient(
     to right,
     #0d0d0d,
@@ -133,14 +142,15 @@
   @include frames($backgroundImg: url(./frames/border-top-bottom.png));
   transform: rotate(180deg);
   height: 30px;
-  width: 100%;
+  width: 110%;
   top: 0;
 }
 
 .frame-bottom {
   @include frames($backgroundImg: url(./frames/border-top-bottom.png));
+  transform: rotateY(180deg);
   height: 40px;
-  width: 100%;
+  width: 102%;
   bottom: 0;
 }
 

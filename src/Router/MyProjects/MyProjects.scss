@@ -1,0 +1,15 @@
+.main-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-pic-projects {
+  margin-top: 150px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 700px;
+  background-image: url(./image/Anonymous-Mask.jpg);
+  box-shadow: var(--BoxShadowsOnSections);
+}

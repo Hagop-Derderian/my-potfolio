@@ -1,4 +1,3 @@
-
 .Footer-Main {
   width: 100%;
   margin-top: 100px;
@@ -11,9 +10,7 @@
     margin: 30px 30px;
     display: flex;
     align-items: center;
-
     justify-content: space-between;
-
     .Terms-div {
       ul {
         display: flex;
@@ -23,16 +20,18 @@
           list-style: none;
           a {
             text-decoration: none;
-            color: grey;
+            color: rgb(172, 172, 172);
             font-size: 20px;
+             text-shadow: var(--FontTextShadow);
           }
         }
       }
     }
     .MadeBy-div {
-      color: grey;
+      color: rgb(172, 172, 172);
       font-size: 20px;
       margin: auto;
+       text-shadow: var(--FontTextShadow);
     }
     .GoUp-div {
       margin: 30px auto;
@@ -42,7 +41,7 @@
         height: 50px;
         border-radius: 40%;
         padding-right: 10px;
-        background-color: var( --FooterButtonColor);
+        background-color: var(--FooterButtonColor);
         box-shadow: var(--InsideBoxShadows);
         .iconUp {
           width: 40px;

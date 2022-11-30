@@ -16,11 +16,14 @@ function TopContent(props) {
       <div className="inside-Content">
         <div data-aos="zoom-in-top" className="Text-div">
           <h1>
-            ~ FrontEnd ~<br />~Web Developer~
+            ~ FrontEnd ~<br />
+            ~Web Developer~
           </h1>
           <button onClick={handleClick}>
             Learn More <br />
-            <BiDownArrow style={{ width: "20px", height: "20px" }} />
+            <BiDownArrow
+              style={{ width: "20px", height: "20px", color: "grey" }}
+            />
           </button>
         </div>
       </div>

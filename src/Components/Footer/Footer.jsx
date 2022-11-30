@@ -1,26 +1,36 @@
-import React from "react";
-// import { useRef } from "react";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import "./Footer.scss";
 
 import { MdOutlineKeyboardArrowUp } from "react-icons/md";
 
 function Footer() {
+  const location = useLocation();
+
+  let fixed = ["/MyProjects", "/MyContacts", "/"].includes(location.pathname);
+
   const handleClick = () => {
     window.scrollTo({ behavior: "smooth", top: 0 });
   };
   return (
-    <div id="Scrolldown" className="Footer-Main">
+    <div
+      id="Scrolldown"
+      className="Footer-Main"
+      style={{
+        display: fixed === false ? "none" : "block",
+      }}
+    >
       <div className="align-items">
         <div className="Terms-div">
           <ul>
             <li>
-              <a href="">TERMS & CONDITION</a>
+              <a href="terms and conditions">TERMS & CONDITION</a>
             </li>
             <li
               style={{ width: "1px", height: "25px", backgroundColor: "grey" }}
             ></li>
             <li>
-              <a href="">PRIVACY POLICY</a>
+              <a href="privacy policy">PRIVACY POLICY</a>
             </li>
           </ul>
         </div>

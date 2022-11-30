@@ -6,7 +6,7 @@ import { SiRedux, SiSass} from "react-icons/si";
 function RightMap() {
   const title = [
     {
-      title: "SASS/LESS",
+      title: "SASS",
       absolute: "0%",
       percentage: "90%",
       width: "90%",

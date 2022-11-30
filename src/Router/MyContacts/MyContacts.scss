@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap");
+
 @mixin bgimage($pickImg, $pickPos: center) {
   background-image: $pickImg;
   background-position: $pickPos;
@@ -5,120 +7,177 @@
   background-size: cover;
 }
 
+.top-pic-contacts {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  box-shadow: var(--BoxShadowsOnSections);
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    opacity: 0.8;
+    @include bgimage($pickImg: url(./Images/anonymousTopPic2.jpg));
+  }
+  .top-insideContent {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    top: 50%;
+    right: 50%;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    background-color: rgb(130, 128, 128, 0.5);
+    p {
+      font-size: 30px;
+      text-align: center;
+      margin: 40px auto;
+      color: rgb(255, 255, 255);
+      text-shadow: 0px 0px 6px rgb(255, 0, 0);
+    }
+  }
+}
+
 .Main-ContactsDiv {
   width: 100%;
   height: 100%;
   margin-top: 150px;
-  .First-Bg-pic {
-    @include bgimage($pickImg: url(./Images/kcITv5.webp), $pickPos: center);
-    width: 100%;
-    height: 700px;
-    opacity: 0.8;
-  }
   .inside-div {
     margin-top: 100px;
     width: 100%;
+    height: 900px;
     position: relative;
     display: flex;
     flex-direction: row;
-    @include bgimage($pickImg: var(--BGImageBottomContent), $pickPos: left);
-    opacity: 0.7;
-    height: 900px;
-
+    box-shadow: var(--BoxShadowsOnSections);
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      opacity: 0.8;
+      @include bgimage($pickImg: var(--BGImageBottomContent), $pickPos: center);
+    }
     .bottom-div-content {
       position: absolute;
       left: 100px;
-      height: 600px;
-      width: 800px;
+      height: 700px;
+      width: 40%;
       border-radius: 10px;
       margin-top: 120px;
       padding: 20px 20px;
       background-color: rgba(25, 17, 17, 0.6);
       box-shadow: var(--InsideBoxShadows);
       h1 {
-        font-size: 60px;
-        text-shadow: 1px 3px 5px;
+        font-size: 50px;
+        text-shadow: var(--FontTextShadow);
         margin: 0;
         text-align: center;
         color: rgb(233, 232, 232);
       }
+
       .div-form {
         width: 100%;
         display: flex;
         align-items: center;
         form {
           width: 100%;
-          height: 300px;
+          height: 350px;
           display: flex;
           flex-direction: column;
           align-items: center;
-          font-family: "Marcellus SC";
+          font-family: "Marcellus", serif;
           color: white;
           .ToFill-div {
             height: 200px;
             text-align: center;
             .LabelForName {
+              margin-bottom: 10px;
               display: flex;
+              gap: 10px;
               flex-direction: column;
               font-size: 30px;
               color: rgb(233, 232, 232);
-              text-shadow: 1px 3px 5px;
+              text-shadow: var(--FontTextShadow);
               font-weight: 600;
               .InputForName {
-                width: 300px;
+                width: 350px;
                 height: 30px;
                 border-radius: 5px;
+                outline: none;
+                &:hover {
+                  box-shadow: var(--InsideBoxShadows);
+                }
+                &:focus {
+                  box-shadow: var(--HoverBoxShadowsLight);
+                }
               }
             }
+
             .LabelForLastName {
+              margin-bottom: 10px;
               display: flex;
+              gap: 10px;
               flex-direction: column;
               font-size: 30px;
               color: rgb(233, 232, 232);
-              text-shadow: 1px 3px 5px;
+              text-shadow: var(--FontTextShadow);
               font-weight: 600;
               .InputForLastName {
-                width: 300px;
+                width: 350px;
                 height: 30px;
                 border-radius: 5px;
+                outline: none;
+                &:hover {
+                  box-shadow: var(--InsideBoxShadows);
+                }
+                &:focus {
+                  box-shadow: var(--HoverBoxShadowsLight);
+                }
               }
             }
           }
 
-          .ForEmail {
-            border-right: 1px solid rgb(143, 115, 108);
-            outline: none;
-            border: none;
-            border-radius: 4px;
-            height: 50px;
-            width: 500px;
-            padding-left: 10px;
-            margin-top: 20px;
-            font-size: 20px;
-            font-family: "Marcellus SC";
-            box-shadow: var(--InsideBoxShadows);
-            &:hover {
-              box-shadow: var(--HoverBoxShadowsLight);
+          .LabelForEmail {
+            text-align: center;
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+            font-size: 30px;
+            color: rgb(233, 232, 232);
+            text-shadow: var(--FontTextShadow);
+            font-weight: 600;
+            .InputForEmail {
+              outline: none;
+              border-radius: 4px;
+              width: 350px;
+              height: 35px;
+              border-radius: 5px;
+              padding-left: 10px;
+              font-size: 20px;
+              &:hover {
+                box-shadow: var(--InsideBoxShadows);
+              }
+              &:focus {
+                box-shadow: var(--HoverBoxShadowsLight);
+              }
+              &::placeholder {
+                color: rgb(48, 46, 46);
+                font-weight: 600;
+              }
             }
-            &::placeholder {
-              color: rgb(48, 46, 46);
-              font-weight: 600;
-            }
-          }
-          button {
-            width: 150px;
-            border-radius: 10px;
-            height: 60px;
-            background-color: darkred;
-            color: rgb(199, 199, 199);
-            font-size: 20px;
-            border-left: none;
-            cursor: pointer;
-            background-color: var(--SubmitBTN);
-            box-shadow: var(--InsideBoxShadows);
           }
           .TextArea-div {
             margin: auto;
+            width: 370px;
             .LabelForTextArea {
               margin-top: 20px;
               font-size: 30px;
@@ -127,32 +186,48 @@
               flex-direction: column;
               gap: 10px;
               .Textarea {
-                width: 400px;
-                background-color: rgb(180, 180, 180);
-                box-shadow: 0px 0px 10px 5px rgb(192, 192, 192);
-                text-align: left;
+                width: 100%;
+                height: 150px;
+                font-size: 20px;
                 border: 0;
-                &:focus {
-                  width: 600px;
-                  &::placeholder {
-                    padding-top: 60px;
-                    padding-left: 150px;
-                  }
+                border-radius: 10px;
+                text-align: left;
+                background-color: rgb(255, 255, 255);
+                &:hover {
+                  box-shadow: var(--InsideBoxShadows);
                 }
-                &::placeholder {
-                  padding-top: 60px;
-                  padding-left: 150px;
+                &:focus {
+                  outline: none;
+                  box-shadow: var(--HoverBoxShadowsLight);
+                }
+                &::-webkit-input-placeholder {
+                  font-size: 20px;
+                  text-align: center;
+                  line-height: 140px;
+                  color: var( --RememberBeNice);
                 }
               }
             }
-          }
-          .LabelForTextArea {
-            margin-top: 20px;
-            font-size: 30px;
+            .LabelForTextArea {
+              margin-top: 20px;
+              font-size: 30px;
+              text-shadow: var(--FontTextShadow);
+              .Textarea {
+                width: 100%;
 
-            .Textarea {
-              width: 400px;
+              }
             }
+          }
+          .Submit-button {
+            width: 150px;
+            border-radius: 10px;
+            padding: 10px 0px;
+            font-size: 20px;
+            margin-top: 35px;
+            cursor: pointer;
+            color: rgb(255, 255, 255);
+            background-color: var(--SubmitBTN);
+            box-shadow: var(--InsideBoxShadows);
           }
         }
       }

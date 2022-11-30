@@ -1,10 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
-// import TextSqueeze from "./TextSqueeze";
+import { Link, useLocation } from "react-router-dom";
 import "./Header.scss";
 import Hacker from "./images//Hacker-icon.jpg";
 import { useState } from "react";
-
 import { MdArrowBackIos, MdOutlineArrowForwardIos } from "react-icons/md";
 
 function Header() {
@@ -14,8 +12,8 @@ function Header() {
     <header className="Header-mainDiv">
       <div className="Header-insideDiv">
         <div
-          // data-aos-duration="1000"
-          // data-aos="zoom-in-right"
+          data-aos-duration="1000"
+          data-aos="zoom-in-right"
           className="left-div"
         >
           <h2>
@@ -29,8 +27,8 @@ function Header() {
           />
         </div>
         <div
-          // data-aos-duration="1000"
-          // data-aos="zoom-out-down"
+          data-aos-duration="1000"
+          data-aos="zoom-out-down"
           className="mid-div"
         >
           <div className="inside-frame">
@@ -60,22 +58,20 @@ function Header() {
         </div>
 
         <div
-          // data-aos-duration="1000"
-          // data-aos="zoom-out-left"
+          data-aos-duration="1000"
+          data-aos="zoom-out-left"
           className="right-div"
         >
           {!open ? (
-            <div 
-            // data-aos="zoom-in-left" 
-            className="Opened-div">
+            <div data-aos="zoom-in-left" className="Opened-div">
               <button
                 onClick={() => {
                   localStorage.setItem("Color", JSON.stringify("red"));
                   window.location.reload();
                 }}
                 className="Opened-red"
-                // data-aos-duration="2300"
-                // data-aos="zoom-in"
+                data-aos-duration="2300"
+                data-aos="zoom-in"
               >
                 <button className="Button-Absolute"></button>
               </button>
@@ -85,8 +81,8 @@ function Header() {
                   window.location.reload();
                 }}
                 className="Opened-blue"
-                // data-aos-duration="1500"
-                // data-aos="zoom-in"
+                data-aos-duration="1500"
+                data-aos="zoom-in"
               >
                 <button className="Button-Absolute"></button>
               </button>
@@ -96,8 +92,8 @@ function Header() {
                   window.location.reload();
                 }}
                 className="Opened-green"
-                // data-aos-duration="500"
-                // data-aos="zoom-in"
+                data-aos-duration="500"
+                data-aos="zoom-in"
               >
                 <button className="Button-Absolute"></button>
               </button>
@@ -110,7 +106,7 @@ function Header() {
             </div>
           ) : (
             <button
-              // data-aos="fade-right"
+              data-aos="fade-right"
               onClick={() => setOpen(!open)}
               className="Button-to-open "
             >

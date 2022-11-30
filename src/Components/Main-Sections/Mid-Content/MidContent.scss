@@ -1,5 +1,3 @@
-
-
 %Dflex {
   display: flex;
   align-items: center;
@@ -60,11 +58,10 @@
     position: absolute;
     top: 150px;
     width: 90%;
-    height: 550px;
+    height: 470px;
     display: flex;
     gap: 20px;
-    border-bottom: var(--BorderColors);
-
+    // border-bottom: var(--BorderColors);
     .Left-div,
     .Right-div {
       position: relative;
@@ -212,11 +209,122 @@
   }
 }
 
-.animation-language {
-  display: flex;
-  flex-direction: row;
+$color-black: hsl(0, 0%, 5%);
+$color-color: hsl(0, 0%, 100%);
+$color-react: hwb(180 20% 0%);
+$porcent-react: 52;
+@function strokeDashoffset($num) {
+  @return 440 - (440 * $num) / 100;
+}
+
+.For-ProgressBars {
+  height: 350px;
+}
+
+.container {
+  position: relative;
+  margin-top: 320px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 300px;
+  // box-shadow: var(--InsideBoxShadows);
+  background-color: var(--GradientBGC);
+}
+
+.for-progressBar {
+  display: flex;
+  justify-content: space-around;
+}
+
+.progressbar-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  text-shadow: var(--FontTextShadow);
+  .Name-first,
+  .Name-second,
+  .Name-third {
+    color: aliceblue;
+    font-size: 25px;
+    font-weight: 700;
+    text-shadow: var(--FontTextShadow);
+  }
+}
+
+.progressbar {
+  position: relative;
+  width: 220px;
   height: 200px;
-  margin-top: 700px;
-  margin-left: 300px;
+  margin: 20px 20px;
+  transform: rotate(-90deg);
+  border-radius: 10px;
+}
+
+.progressbar__svg {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.progressbar__svg-circle1 {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke-width: 15;
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+  stroke-linecap: round;
+  transform: translate(50px, 20px); // stroke-width / 2
+  stroke: var(--SkillsLinePercentage);
+}
+.progressbar__svg-circle2 {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke-width: 15;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 440;
+  stroke-linecap: round;
+  transform: translate(50px, 20px); // stroke-width / 2
+
+  stroke: var(--SkillsLinePercentage);
+}
+.progressbar__svg-circle3 {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke-width: 15;
+  stroke-dasharray: 560;
+  stroke-dashoffset: 440;
+  stroke-linecap: round;
+  transform: translate(50px, 20px); // stroke-width / 2
+  stroke: var(--SkillsLinePercentage);
+}
+
+.shadow {
+  &-react {
+    filter: var( --ProgressbarCircleBoxShadow);
+  }
+}
+
+.progressbar__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 0.25em 0.5em;
+  font-family: "Marcellus", sans-serif;
+  font-size: 24px;
+  border-radius: 0.25em;
+  color: hsl(0, 0%, 100%);
+  transform: translate(-25%, -50%) rotate(90deg);
+}
+
+@keyframes anim_circle-react {
+  to {
+    stroke-dashoffset: strokeDashoffset($porcent-react);
+  }
 }

@@ -33,7 +33,12 @@ function RouterLayoutError() {
       <Outlet />
       <div className="bgvid">{video}</div>
       <div className="accessDenied-div">
-        <img src={Error404} alt="error404"/>
+        <img
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          src={Error404}
+          alt="error404"
+        />
       </div>
     </>
   );
