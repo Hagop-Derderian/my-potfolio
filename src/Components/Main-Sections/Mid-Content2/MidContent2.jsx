@@ -1,8 +1,8 @@
 import React from "react";
 import "./MidContent2.scss";
-// import { motion } from "framer-motion";
 
 function MidContent2() {
+  const showAnimation = window.innerWidth > 410;
   return (
     <div className="Mid-content-2">
       <div className="Mid-inside-div">
@@ -21,6 +21,7 @@ function MidContent2() {
           <div className="div-address" style={{ display: "flex" }}>
             <div className="div-ul">
               <ul
+                className="left-ul"
                 data-aos="fade-right"
                 style={{
                   fontSize: "25px",
@@ -34,6 +35,7 @@ function MidContent2() {
                 <li>EMAIL</li>
               </ul>
               <ul
+                className="right-ul"
                 data-aos="flip-down"
                 style={{
                   textDecoration: "none",
@@ -47,11 +49,20 @@ function MidContent2() {
                 <li>: hagop_111@outlook.com</li>
               </ul>
             </div>
-            <div className="animation-logos">
-              <div data-aos="zoom-in-right" className="First-logo"></div>
-              <div data-aos="zoom-in" className="Second-logo"></div>
-              <div data-aos="zoom-in-left" className="Third-logo"></div>
-            </div>
+            
+            {showAnimation ? (
+              <div className="animation-logos">
+                <div data-aos="zoom-in-right" className="First-logo"></div>
+                <div data-aos="zoom-in" className="Second-logo"></div>
+                <div data-aos="zoom-in-left" className="Third-logo"></div>
+              </div>
+            ) : (
+              <div className="animation-logos">
+                <div data-aos="zoom-in" className="First-logo"></div>
+                <div data-aos="zoom-in" className="Second-logo"></div>
+                <div data-aos="zoom-in" className="Third-logo"></div>
+              </div>
+            )}
           </div>
         </div>
       </div>

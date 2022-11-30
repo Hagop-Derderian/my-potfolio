@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link} from "react-router-dom";
 import "./Header.scss";
 import Hacker from "./images//Hacker-icon.jpg";
 import { useState } from "react";
@@ -19,12 +19,7 @@ function Header() {
           <h2>
             ANON<span>YMOUS</span>
           </h2>
-          <img
-            className="Reaper"
-            style={{ borderRadius: "50%", width: "80px", height: "80px" }}
-            src={Hacker}
-            alt="Reaper"
-          />
+          <img className="Reaper" src={Hacker} alt="Reaper" />
         </div>
         <div
           data-aos-duration="1000"
@@ -34,14 +29,7 @@ function Header() {
           <div className="inside-frame">
             <div className="div-nav">
               <nav>
-                <ul
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    width: "100%",
-                    gap: "25px",
-                  }}
-                >
+                <ul>
                   <li>
                     <Link to="/">Home Page</Link>
                   </li>
@@ -63,7 +51,9 @@ function Header() {
           className="right-div"
         >
           {!open ? (
-            <div data-aos="zoom-in-left" className="Opened-div">
+            <div
+              className="Opened-div"
+            >
               <button
                 onClick={() => {
                   localStorage.setItem("Color", JSON.stringify("red"));
@@ -101,7 +91,7 @@ function Header() {
                 className="Button-to-close "
                 onClick={() => setOpen(!open)}
               >
-                <MdOutlineArrowForwardIos className="Arrow-icon" />
+                <MdOutlineArrowForwardIos className="Arrow-icon-forward" />
               </button>
             </div>
           ) : (
@@ -110,7 +100,7 @@ function Header() {
               onClick={() => setOpen(!open)}
               className="Button-to-open "
             >
-              <MdArrowBackIos className="Arrow-icon" />
+              <MdArrowBackIos className="Arrow-icon-back" />
             </button>
           )}
         </div>

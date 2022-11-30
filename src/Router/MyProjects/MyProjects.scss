@@ -1,15 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap");
+
 .main-div {
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+  height: 100%;
 }
 
 .top-pic-projects {
-  margin-top: 150px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  position: relative;
   width: 100%;
   height: 700px;
-  background-image: url(./image/Anonymous-Mask.jpg);
   box-shadow: var(--BoxShadowsOnSections);
+  margin-top: 200px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    background-image: url(./image/v-for-vendetta.jpg);
+  }
+  .inside-content-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    width: 300px;
+    h1 {
+      text-align: center;
+      color: white;
+      font-size: 50px;
+      margin: 200px auto;
+      margin-bottom: 50px;
+      text-shadow: 0px 5px 16px rgb(41, 41, 41);
+      white-space: nowrap;
+      @media only screen and (max-width: 500px) {
+        font-size: 40px;
+      }
+    }
+    button {
+      background-color: black;
+      width: 140px;
+      height: 40px;
+      margin-left: 100px;
+      color: white;
+      border: 2px solid grey;
+      border-radius: 20px;
+      @media only screen and (max-width: 500px) {
+        margin-left: 90px;
+      }
+    }
+  }
+}
+
+.Mid-SectionDiv {
+  position: relative;
+  width: 100%;
+  height: 1300px;
+  opacity: 0.8;
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: var(--BoxShadowsOnSections);
+  margin-top: 150px;
+  @media only screen and (max-width: 1325px) {
+    height: 2400px;
+  }
+  @media only screen and (max-width: 700px) {
+    height: 1800px;
+  }
+  @media only screen and (max-width: 560px) {
+    height: 1400px;
+  }
+  @media only screen and (max-width: 470px) {
+    height: 1400px;
+  }
+
+  .title-div {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .title {
+      display: inline-block;
+      padding: 10px 10px;
+      white-space: nowrap;
+      font-size: 50px;
+      border-radius: 30px;
+      color: white;
+      text-align: center;
+      font-family: "Marcellus SC", sans-serif;
+      text-shadow: var(--FontTextShadow);
+      box-shadow: var(--InsideBoxShadows);
+      background-color: var(--FooterButtonColor);
+      @media only screen and (max-width: 800px) {
+        font-size: 40px;
+      }
+      @media only screen and (max-width: 560px) {
+        padding: 10px 10px;
+        margin-top: 40px;
+        font-size: 30px;
+      }
+    }
+  }
+
+  .content-MainDiv {
+    display: flex;
+    gap: 100px 40px;
+    align-content: center;
+    width: 95%;
+    height: 80%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+
+    @media only screen and (max-width: 1570px) {
+      width: 90%;
+    }
+    @media only screen and (max-width: 1400px) {
+      width: 95%;
+    }
+    @media only screen and (max-width: 1325px) {
+      height: 90%;
+      gap: 150px;
+    }
+    @media only screen and (max-width: 700px) {
+      gap: 100px;
+    }
+
+    .FirstProjectDiv,
+    .SecondProjectDiv,
+    .ThirdProjectDiv,
+    .FourthProjectDiv {
+      position: relative;
+      width: 700px;
+      height: 400px;
+      background-color: black;
+      box-shadow: var(--InsideBoxShadows);
+      &:hover {
+        button {
+          display: block;
+          --webkit-tansitions: all 2s ease-in-out;
+          color: rgb(255, 255, 255);
+          background-color: rgb(0, 0, 0);
+          box-shadow: var(--InsideBoxShadows);
+        }
+      }
+      @media only screen and (max-width: 1570px) {
+        width: 650px;
+        height: 350px;
+      }
+      @media only screen and (max-width: 1510px) {
+        width: 600px;
+        height: 350px;
+      }
+      @media only screen and (max-width: 1325px) {
+        width: 800px;
+        height: 400px;
+      }
+      @media only screen and (max-width: 900px) {
+        width: 600px;
+      }
+      @media only screen and (max-width: 700px) {
+        width: 500px;
+        height: 300px;
+      }
+      @media only screen and (max-width: 560px) {
+        width: 400px;
+        height: 200px;
+      }
+      @media only screen and (max-width: 470px) {
+        width: 300px;
+        height: 200px;
+      }
+
+      h2 {
+        padding: 4px 0px;
+        margin: auto;
+        text-align: center;
+        border-top: none;
+        color: white;
+        font-family: "Marcellus", sans-serif;
+        box-shadow: var(--InsideBoxShadows);
+        background-color: var(--FooterButtonColor);
+        @media only screen and (max-width: 560px) {
+          font-size: 20px;
+        }
+      }
+      button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 150px;
+        transform: translate(-50%, -50%);
+        border-radius: 15px;
+        display: none;
+        --webkit-tansitions: all 2s ease;
+        @media only screen and (max-width: 700px) {
+          top: 60%;
+          width: 120px;
+          font-size: 13px;
+          height: 50px;
+        }
+        @media only screen and (max-width: 560px) {
+          width: 100;
+          font-size: 10px;
+          height: 40px;
+        }
+      }
+      img {
+        width: 100%;
+        height: 91%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        filter: blur(2.6px) grayscale(0.8);
+        transition: 2s;
+        @media only screen and (max-width: 1570px) {
+          height: 89%;
+        }
+        @media only screen and (max-width: 700px) {
+          height: 88%;
+        }
+        @media only screen and (max-width: 600px) {
+          height: 85%;
+        }
+        &:hover {
+          --webkit-tansitions: all 2s ease;
+          filter: none;
+        }
+      }
+    }
+  }
 }

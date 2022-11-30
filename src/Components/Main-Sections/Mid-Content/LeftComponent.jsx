@@ -1,12 +1,23 @@
 import React from "react";
 
 function LeftComponent(props) {
+  const showAnimation = window.innerWidth > 1000;
   return (
     <div className="column-divs">
-      <div data-aos="fade-up-left" className="left-icons">
-        <h1 className="titles-left">{props.titles}</h1>
-        <div className="icon-div-left">{props.icons}</div>
-      </div>
+      {showAnimation ? (
+        <div className="left-icons">
+          <h1 className="titles-left">{props.titles}</h1>
+          <div data-aos="fade-up-left" className="icon-div-left">
+            {props.icons}
+          </div>
+        </div>
+      ) : (
+        <div data-aos="fade-up" className="left-icons">
+          <h1 className="titles-left">{props.titles}</h1>
+          <div className="icon-div-left">{props.icons}</div>
+        </div>
+      )}
+
       <div className="Line-div-left">
         <div className="for-percentage-div">
           <div className="Line-left-div" style={{ width: `${props.width}` }}>
@@ -20,9 +31,7 @@ function LeftComponent(props) {
         </div>
       </div>
 
-      <h3 style={{ position: "absolute", right: "10px", marginTop: "80px" }}>
-        {props.percentage}
-      </h3>
+      <h3 className="left-h3">{props.percentage}</h3>
     </div>
   );
 }

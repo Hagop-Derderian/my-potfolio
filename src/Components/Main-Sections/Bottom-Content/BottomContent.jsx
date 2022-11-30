@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./BottomContent.scss";
 
 function BottomContent() {
   return (
     <div className="Bottom-Content">
       <div data-aos="zoom-in" className="inside-div">
-        <div data-aos="fade-left" className="bottom-div-content">
+        <div data-aos="fade-up" className="bottom-div-content">
           <h1>Let's Project & Get a Free Consultation.</h1>
           <div className="div-form">
             <form action="">

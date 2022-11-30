@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./MyContacts.scss";
-
+import emailjs from "@emailjs/browser";
+import { BiDownArrow } from "react-icons/bi";
 function MyContacts() {
   const [inputs, setInputs] = useState({
     nameI: "",
@@ -9,23 +10,59 @@ function MyContacts() {
     textarea: "",
   });
 
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_a7ugy55",
+        "template_1983tl8",
+        form.current,
+        "GiQmq2q2ZxDgpeYtq"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("message sent");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
+  const ref = useRef(null);
+  const handleClick = () => {
+    ref.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+    });
+  };
+
   return (
     <div className="Main-ContactsDiv">
       <div className="top-pic-contacts">
         <div className="top-insideContent">
-          <p>Contact Me</p>
+          <h1>
+            ~ FrontEnd ~<br />
+            ~Contact Me :) ~
+          </h1>
+          <button onClick={handleClick}>
+            Learn More <br />
+            <BiDownArrow
+              style={{ width: "20px", height: "20px", color: "grey" }}
+            />
+          </button>
         </div>
       </div>
 
-      <div data-aos="zoom-in" className="inside-div">
+      <div data-aos="zoom-in" ref={ref} className="inside-div">
         <div data-aos="fade-left" className="bottom-div-content">
           <h1>Let's Project & Get a Free Consultation.</h1>
+
           <div className="div-form">
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-              }}
-            >
+            <form ref={form} onSubmit={sendEmail}>
               <div className="ToFill-div">
                 <label className="LabelForName">
                   ~ First Name ~
@@ -35,8 +72,10 @@ function MyContacts() {
                     }
                     className="InputForName"
                     type="text"
+                    name="user_name"
                   />
                 </label>
+
                 <label className="LabelForLastName">
                   ~ Last Name ~
                   <input
@@ -45,6 +84,7 @@ function MyContacts() {
                     }
                     className="InputForLastName"
                     type="text"
+                    name="user_lastname"
                   />
                 </label>
               </div>
@@ -58,6 +98,7 @@ function MyContacts() {
                     className="InputForEmail"
                     required
                     type="email"
+                    name="user_email"
                   />
                 </label>
               </div>

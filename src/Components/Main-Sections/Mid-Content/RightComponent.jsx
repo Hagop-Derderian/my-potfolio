@@ -1,12 +1,22 @@
 import React from "react";
 
 function RightComponent(props) {
+  const showAnimation = window.innerWidth > 1000;
   return (
     <div className="column-divs">
-      <div data-aos="fade-up-right" className="right-icons">
-        <h1 className="titles-right">{props.titles}</h1>
-        <div className="icon-div-right"> {props.icons}</div>
-      </div>
+      {showAnimation ? (
+        <div className="right-icons">
+          <h1 className="titles-right">{props.titles}</h1>
+          <div data-aos="fade-up-right" className="icon-div-right">
+            {props.icons}
+          </div>
+        </div>
+      ) : (
+        <div data-aos="fade-up" className="right-icons">
+          <h1 className="titles-right">{props.titles}</h1>
+          <div className="icon-div-right">{props.icons}</div>
+        </div>
+      )}
 
       <div className="Line-div-right">
         <div className="for-percentage-div">
@@ -18,9 +28,7 @@ function RightComponent(props) {
         </div>
       </div>
 
-      <h3 style={{ position: "absolute", left: "10px", marginTop: " 80px" }}>
-        {props.percentage}
-      </h3>
+      <h3 className="right-h3">{props.percentage}</h3>
     </div>
   );
 }

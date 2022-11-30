@@ -1,7 +1,7 @@
 import React from "react";
 import RightComponent from "./RightComponent";
 import { DiJavascript } from "react-icons/di";
-import { SiRedux, SiSass} from "react-icons/si";
+import { SiRedux, SiSass, SiAdobephotoshop } from "react-icons/si";
 
 function RightMap() {
   const title = [
@@ -27,11 +27,11 @@ function RightMap() {
       icon: <DiJavascript className="right-icon" />,
     },
     {
-      title: "REACT",
+      title: "Photoshop",
       absolute: "0%",
       percentage: "80%",
       width: "80%",
-      icon: <SiRedux className="right-icon" />,
+      icon: <SiAdobephotoshop className="right-icon-photoshop" />,
     },
   ];
 

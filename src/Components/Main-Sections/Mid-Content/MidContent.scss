@@ -28,9 +28,13 @@
   width: 100%;
   height: 1000px;
   margin-top: 150px;
+  display: flex;
+  flex-direction: column;
   box-shadow: var(--BoxShadowsOnSections);
   @extend %Dflex;
-
+  @media only screen and (max-width: 1000px) {
+    height: 1500px;
+  }
   .title {
     position: absolute;
     top: 30px;
@@ -42,7 +46,6 @@
     border-bottom: var(--BorderColors);
     color: var(--SkillTitlesColor);
   }
-
   &::before {
     content: "";
     position: absolute;
@@ -55,13 +58,23 @@
   }
 
   .Mid-inside-div {
-    position: absolute;
-    top: 150px;
-    width: 90%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
     height: 470px;
     display: flex;
+    flex-direction: row;
     gap: 20px;
-    // border-bottom: var(--BorderColors);
+    margin-top: 50px;
+    @media only screen and (max-width: 1000px) {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      gap: 50px;
+      height: 900px;
+      margin-top: 120px;
+    }
     .Left-div,
     .Right-div {
       position: relative;
@@ -74,9 +87,22 @@
       flex-direction: column;
       background-color: rgba(29, 22, 22, 0.6);
       box-shadow: 0px 0px 6px 2px rgb(110, 110, 110);
-
+      @media only screen and (max-width: 1000px) {
+        width: 80%;
+      }
+      @media only screen and (max-width: 450px) {
+        width: 90%;
+      }
       .column-divs {
         @extend %ColumnDivs;
+        .left-h3 {
+          position: absolute;
+          right: 10px;
+          margin-top: 80px;
+          @media only screen and (max-width: 450px) {
+            right: 5px;
+          }
+        }
         .left-icons {
           @extend %Dflex;
           position: relative;
@@ -115,6 +141,10 @@
           width: 80%;
           background-color: rgb(15, 15, 15);
           box-shadow: 0px 0px 5px 1px rgb(89, 42, 4);
+          @media only screen and (max-width: 550px) {
+            right: 20px;
+          }
+
           .for-percentage-div {
             @extend %Dflex;
             overflow: hidden;
@@ -140,6 +170,14 @@
 
       .column-divs {
         @extend %ColumnDivs;
+        .right-h3 {
+          position: absolute;
+          left: 10px;
+          margin-top: 80px;
+          @media only screen and (max-width: 450px) {
+            left: 5px;
+          }
+        }
         .right-icons {
           @extend %Dflex;
           position: relative;
@@ -149,15 +187,19 @@
           border-radius: 50%;
           height: 80px;
           .titles-right {
+            white-space: nowrap;
             position: absolute;
             right: 100px;
             display: inline-block;
             font-size: 30px;
             text-align: right;
             height: 30px;
-            width: 120px;
+            width: 100%;
             margin-top: 30px;
             color: var(--SkillTitlesColor);
+            @media only screen and (max-width: 1000px) {
+              font-size: 25px;
+            }
           }
           .icon-div-right {
             @extend %Dflex;
@@ -169,9 +211,17 @@
             border-radius: 50%;
             border: 3px solid black;
             box-shadow: var(--SkillsIconsShadowBox);
+            @media only screen and (max-width: 550px) {
+              right: 20px;
+            }
             .right-icon {
               width: 50px;
               height: 50px;
+            }
+            .right-icon-photoshop {
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
             }
           }
         }
@@ -184,6 +234,9 @@
           left: 40px;
           background-color: rgb(15, 15, 15);
           box-shadow: 0px 0px 5px 1px rgb(89, 42, 4);
+          @media only screen and (max-width: 550px) {
+            left: 20px;
+          }
           .for-percentage-div {
             @extend %Dflex;
             height: 50px;
@@ -219,31 +272,80 @@ $porcent-react: 52;
 
 .For-ProgressBars {
   height: 350px;
+  width: 100%;
 }
 
 .container {
-  position: relative;
-  margin-top: 320px;
-  width: 100%;
   display: flex;
+  position: relative;
   flex-direction: column;
-  align-items: flex-start;
-  min-height: 300px;
-  // box-shadow: var(--InsideBoxShadows);
-  background-color: var(--GradientBGC);
+  margin: 20px auto;
+  width: 60%;
+  margin-top: 60px;
+  padding: 20px 0px;
+  border-radius: 20px;
+  background-color: rgb(18, 18, 18);
+  box-shadow: var(--InsideBoxShadows);
+  @media only screen and (max-width: 1200px) {
+    width: 70%;
+  }
+  @media only screen and (max-width: 1050px) {
+    bottom: 50px;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+  }
+  @media only screen and (max-width: 1000px) {
+    width: 85%;
+    margin-top: 100px;
+  }
+  @media only screen and (max-width: 850px) {
+    justify-content: center;
+    position: relative;
+    width: 90%;
+  }
+  @media only screen and (max-width: 800px) {
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    border-radius: 0;
+  }
 }
 
 .for-progressBar {
   display: flex;
   justify-content: space-around;
+  @media only screen and (max-width: 710px) {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: left;
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      height: 10px;
+      width: 100%;
+    }
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: var(--WebkitColorScroll);
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      box-shadow: var(--InsideBoxShadows);
+    }
+  }
 }
 
 .progressbar-title {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   text-align: center;
   text-shadow: var(--FontTextShadow);
+  @media only screen and (max-width: 800px) {
+    width: 230px;
+  }
   .Name-first,
   .Name-second,
   .Name-third {
@@ -261,6 +363,9 @@ $porcent-react: 52;
   margin: 20px 20px;
   transform: rotate(-90deg);
   border-radius: 10px;
+  @media screen and (max-width: 760px) {
+    margin: 20px 0;
+  }
 }
 
 .progressbar__svg {
@@ -275,7 +380,7 @@ $porcent-react: 52;
   height: 100%;
   fill: none;
   stroke-width: 15;
-  stroke-dasharray: 440;
+  stroke-dasharray: 540;
   stroke-dashoffset: 440;
   stroke-linecap: round;
   transform: translate(50px, 20px); // stroke-width / 2
@@ -307,7 +412,7 @@ $porcent-react: 52;
 
 .shadow {
   &-react {
-    filter: var( --ProgressbarCircleBoxShadow);
+    filter: var(--ProgressbarCircleBoxShadow);
   }
 }
 

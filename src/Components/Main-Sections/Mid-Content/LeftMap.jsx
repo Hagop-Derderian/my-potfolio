@@ -1,8 +1,7 @@
 import React from "react";
 import LeftComponent from "./LeftComponent";
-// import { TfiHtml5 } from "react-icons/tfi";
 import { DiCss3, DiJavascript, DiHtml5, DiReact } from "react-icons/di";
-// import ProgressBar from "react-animated-progress-bar";
+
 function LeftMap() {
   const title = [
     {

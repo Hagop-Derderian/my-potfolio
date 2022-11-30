@@ -26,9 +26,7 @@ function Footer() {
             <li>
               <a href="terms and conditions">TERMS & CONDITION</a>
             </li>
-            <li
-              style={{ width: "1px", height: "25px", backgroundColor: "grey" }}
-            ></li>
+            <li className="wall-li"></li>
             <li>
               <a href="privacy policy">PRIVACY POLICY</a>
             </li>

@@ -38,7 +38,7 @@ function As() {
                   style={{
                     animation:
                       data === true
-                        ? `anim_circle-react 2s ease-in-out forwards`
+                        ? `anim_circle-react 3s ease-in-out forwards`
                         : "",
                   }}
                 ></circle>
@@ -59,7 +59,7 @@ function As() {
                   style={{
                     animation:
                       data === true
-                        ? `anim_circle-react 2s ease-in-out forwards`
+                        ? `anim_circle-react 3s ease-in-out forwards`
                         : "",
                   }}
                 ></circle>
@@ -80,7 +80,7 @@ function As() {
                   style={{
                     animation:
                       data === true
-                        ? `anim_circle-react 2s ease-in-out forwards`
+                        ? `anim_circle-react 3s ease-in-out forwards`
                         : "",
                   }}
                 ></circle>

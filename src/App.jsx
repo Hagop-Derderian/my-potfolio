@@ -1,4 +1,5 @@
 import "./App.scss";
+import "./index.scss";
 import Header from "./Components/Header/Header.jsx";
 import Footer from "./Components/Footer/Footer";
 import Home from "./Router/HomePage/Home";
@@ -31,7 +32,6 @@ function App() {
 
   return (
     <div id={colorId}>
-    
       <Header />
       <Routes>
         <Route path="/" element={<RouterLayout />}>
