@@ -1,9 +1,11 @@
 import React, { useRef } from "react";
 import Yt from "./image/YoutubePic.PNG";
 import Wix from "./image/Wix.PNG";
+import Registration from "./image/registration.PNG";
 import YerevanCity from "./image/YerevanCity.PNG";
-import "./MyProjects.scss";
+import Richard from "./image/Richard.PNG";
 import { BiDownArrow } from "react-icons/bi";
+import "./MyProjects.scss";
 function MyProjects() {
   const ref = useRef(null);
   const handleClick = () => {
@@ -34,7 +36,7 @@ function MyProjects() {
         </div>
         <div className="content-MainDiv">
           <div className="FirstProjectDiv">
-            <h2>YerevanCity</h2>
+            <h2>YouTube project</h2>
             <img src={Yt} alt="youtube" />
             <button>Click here to View Demo project</button>
           </div>
@@ -46,14 +48,26 @@ function MyProjects() {
           </div>
 
           <div className="ThirdProjectDiv">
-            <h2>Richard Project</h2>
+            <h2>YerevanCity Project</h2>
             <img src={YerevanCity} alt="yerevancity" />
             <button>Click here to View Demo project</button>
           </div>
 
           <div className="FourthProjectDiv">
-            <h2>YerevanCity Project</h2>
-            <img src={Yt} alt="" />
+            <h2>Registration Project</h2>
+            <img src={Registration} alt="" />
+            <button>Click here to View Demo project</button>
+          </div>
+
+          <div className="FifthProjectDiv">
+            <h2>Richard Project</h2>
+            <img src={Richard} alt="youtube" />
+            <button>Click here to View Demo project</button>
+          </div>
+
+          <div className="SixthProjectDiv">
+            <h2>TodoList Project</h2>
+            <img src={Yt} alt="youtube" />
             <button>Click here to View Demo project</button>
           </div>
         </div>

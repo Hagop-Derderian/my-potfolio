@@ -13,7 +13,6 @@ function MyContacts() {
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
-
     emailjs
       .sendForm(
         "service_a7ugy55",
@@ -30,6 +29,12 @@ function MyContacts() {
           console.log(error.text);
         }
       );
+    setInputs({
+      nameI: "",
+      lastNameI: "",
+      email: "",
+      textarea: "",
+    });
   };
 
   const ref = useRef(null);
@@ -73,6 +78,7 @@ function MyContacts() {
                     className="InputForName"
                     type="text"
                     name="user_name"
+                    value={inputs.nameI}
                   />
                 </label>
 
@@ -85,6 +91,7 @@ function MyContacts() {
                     className="InputForLastName"
                     type="text"
                     name="user_lastname"
+                    value={inputs.lastNameI}
                   />
                 </label>
               </div>
@@ -99,6 +106,7 @@ function MyContacts() {
                     required
                     type="email"
                     name="user_email"
+                    value={inputs.email}
                   />
                 </label>
               </div>
@@ -116,6 +124,7 @@ function MyContacts() {
                     cols="30"
                     rows="10"
                     placeholder="Remember, Be Nice!"
+                    value={inputs.textarea}
                   ></textarea>
                 </label>
               </div>
