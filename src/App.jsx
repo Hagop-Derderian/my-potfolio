@@ -12,6 +12,9 @@ import { useEffect } from "react";
 import { useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+// import ReactAudioPlayer from "react-audio-player";
+// import detroitMp3 from "./Detroit-Convention-Center-Ambient.mp3";
+import silence from "./250-milliseconds-of-silence.mp3";
 function App() {
   let [colorId, setColorId] = useState("red");
 
@@ -43,6 +46,15 @@ function App() {
       </Routes>
       <Footer />
       <div className="Head-div">
+        <iframe
+          src={silence}
+          allow="autoplay"
+          id="audio"
+          style={{ display: "none" }}
+        ></iframe>
+        <audio id="player" autoplay loop>
+          <source src="audio/source.mp3" type="audio/mp3"></source>
+        </audio>
         <div className="frame-right"></div>
         <div className="frame-left"></div>
         <div className="frame-top"></div>
