@@ -50,13 +50,32 @@ function MyProjects() {
           <div className="ThirdProjectDiv">
             <h2>YerevanCity Project</h2>
             <img src={YerevanCity} alt="yerevancity" />
-            <button>Click here to View Demo project</button>
+            <button>
+              <a
+                href={"https://pocketcodeofficial.github.io/YerevanCity/"}
+                target={"_blank"}
+                rel="noreferrer"
+              >
+                Click here to View Demo project
+              </a>
+            </button>
           </div>
 
           <div className="FourthProjectDiv">
             <h2>Registration Project</h2>
             <img src={Registration} alt="" />
-            <button>Click here to View Demo project</button>
+            <button>
+             
+              <a
+                href={
+                  "https://pocketcodeofficial.github.io/registration-Twitter/"
+                }
+                target={"_blank"}
+                rel="noreferrer"
+              >
+                Click here to View Demo project
+              </a>
+            </button>
           </div>
 
           <div className="FifthProjectDiv">
