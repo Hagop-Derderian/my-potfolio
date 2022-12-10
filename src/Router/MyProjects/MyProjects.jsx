@@ -38,7 +38,11 @@ function MyProjects() {
           <div className="FirstProjectDiv">
             <h2>YouTube project</h2>
             <img src={Yt} alt="youtube" />
-            <button>Click here to View Demo project</button>
+            <button>
+              <a href="project-youtube.notlify.com">
+                Click here to View Demo project
+              </a>
+            </button>
           </div>
 
           <div className="SecondProjectDiv">
@@ -65,7 +69,6 @@ function MyProjects() {
             <h2>Registration Project</h2>
             <img src={Registration} alt="" />
             <button>
-             
               <a
                 href={
                   "https://pocketcodeofficial.github.io/registration-Twitter/"
@@ -87,7 +90,15 @@ function MyProjects() {
           <div className="SixthProjectDiv">
             <h2>TodoList Project</h2>
             <img src={Yt} alt="youtube" />
-            <button>Click here to View Demo project</button>
+            <button>
+              <a
+                target={"_blank"}
+                rel={"noreferal"}
+                href="project-youtube.notlify.com"
+              >
+                Click here to View Demo project
+              </a>
+            </button>
           </div>
         </div>
       </div>
