@@ -1,5 +1,5 @@
 import React from "react";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Header.scss";
 import Hacker from "./images//Hacker-icon.jpg";
 import { useState } from "react";
@@ -51,9 +51,7 @@ function Header() {
           className="right-div"
         >
           {!open ? (
-            <div
-              className="Opened-div"
-            >
+            <div className="Opened-div">
               <button
                 onClick={() => {
                   localStorage.setItem("Color", JSON.stringify("red"));

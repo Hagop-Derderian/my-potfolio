@@ -42,8 +42,8 @@ function MyProjects() {
             <button>
               <a
                 target={"_blank"}
-                rel={"noreferal"}
-                href="project-youtube.notlify.com"
+                rel={"noreferrer"}
+                href="https://project-youtube-hagop.netlify.app/"
               >
                 Click here to View Demo project
               </a>
@@ -53,7 +53,16 @@ function MyProjects() {
           <div className="SecondProjectDiv">
             <h2>Wix Project</h2>
             <img src={Wix} alt="wix" />
-            <button>Click here to View Demo project</button>
+            <button>
+              {" "}
+              <a
+                href={"https://pocketcodeofficial.github.io/WIX/"}
+                target={"_blank"}
+                rel="noreferrer"
+              >
+                Click here to View Demo project
+              </a>
+            </button>
           </div>
 
           <div className="ThirdProjectDiv">
@@ -72,7 +81,7 @@ function MyProjects() {
 
           <div className="FourthProjectDiv">
             <h2>Registration Project</h2>
-            <img src={Registration} alt="" />
+            <img src={Registration} alt="registration" />
             <button>
               <a
                 href={
@@ -89,7 +98,15 @@ function MyProjects() {
           <div className="FifthProjectDiv">
             <h2>Richard Project</h2>
             <img src={Richard} alt="youtube" />
-            <button>Click here to View Demo project</button>
+            <button>
+              <a
+                href={"https://pocketcodeofficial.github.io/Richard-Project/"}
+                target={"_blank"}
+                rel="noreferrer"
+              >
+                Click here to View Demo project
+              </a>
+            </button>
           </div>
 
           <div className="SixthProjectDiv">
@@ -98,8 +115,8 @@ function MyProjects() {
             <button>
               <a
                 target={"_blank"}
-                rel={"noreferal"}
-                href="hagops-todolist.notlify.com"
+                rel={"noreferrer"}
+                href="https://hagops-todolist.netlify.app/"
               >
                 Click here to View Demo project
               </a>
