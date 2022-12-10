@@ -4,6 +4,7 @@ import Wix from "./image/Wix.PNG";
 import Registration from "./image/registration.PNG";
 import YerevanCity from "./image/YerevanCity.PNG";
 import Richard from "./image/Richard.PNG";
+import TodoList from "./image/toDoList.png";
 import { BiDownArrow } from "react-icons/bi";
 import "./MyProjects.scss";
 function MyProjects() {
@@ -39,7 +40,11 @@ function MyProjects() {
             <h2>YouTube project</h2>
             <img src={Yt} alt="youtube" />
             <button>
-              <a href="project-youtube.notlify.com">
+              <a
+                target={"_blank"}
+                rel={"noreferal"}
+                href="project-youtube.notlify.com"
+              >
                 Click here to View Demo project
               </a>
             </button>
@@ -89,12 +94,12 @@ function MyProjects() {
 
           <div className="SixthProjectDiv">
             <h2>TodoList Project</h2>
-            <img src={Yt} alt="youtube" />
+            <img src={TodoList} alt="TodoList" />
             <button>
               <a
                 target={"_blank"}
                 rel={"noreferal"}
-                href="project-youtube.notlify.com"
+                href="hagops-todolist.notlify.com"
               >
                 Click here to View Demo project
               </a>
