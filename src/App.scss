@@ -1,4 +1,7 @@
 #red {
+  --hue-rotate-BGvideo: 0;
+  --hue-rotate-MidContent2: 0;
+  --hue-rotate-BottomContent: 0;
   --AnonymousFontColor: rgb(255, 0, 0);
   --HeaderColor: rgb(53, 0, 0);
   --HeaderBoxShadow: 0px 0px 13px 10px rgb(109, 12, 12);
@@ -7,7 +10,7 @@
   --ButtonClose-Open: red;
   --BorderColors: 3px solid red;
   --BoxShadowsOnSections: 0px 0px 6px 6px rgb(62, 11, 11);
-  --BoxShadowsError404: 0px 0px 16px 18px rgb(87, 2, 2);
+  --BoxShadowsError404: 0px 0px 16px 18px rgb(122, 0, 0);
   --SubmitBTN: rgb(123, 6, 6);
   --SkillTitlesColor: rgb(243, 4, 4);
   --SkillsIconsShadowBox: 0px 0px 7px 7px #4b0107;
@@ -19,10 +22,6 @@
   --FontColor: red;
   --FontTextShadow: 1px 1px 5px rgb(255, 0, 0);
   --ProgressbarCircleBoxShadow: drop-shadow(0 0 5px rgb(154, 154, 154));
-  --BGImageMidContent2: url(./Components/Main-Sections/Mid-Content2/images/edited-CoverImage.jpg);
-  --BGImageMidContent2Cropped: url(./Components/Main-Sections/Mid-Content2/images/edited-CoverImageRedCropped.jpg);
-  --BGImageMainBottomContentCropped: url(./Components/Main-Sections/Bottom-Content/images/FlippedCroppedRed2.jpg);
-  --BGImageBottomContent: url(./Router/MyContacts/Images/FlippedCroppedRed.jpg);
   --GradientBGC: radial-gradient(
     circle,
     #4a0707,
@@ -34,6 +33,9 @@
 }
 
 #green {
+  --hue-rotate-BGvideo: 120deg;
+  --hue-rotate-MidContent2: 120deg;
+  --hue-rotate-BottomContent: 120deg;
   --HeaderColor: rgb(1, 22, 0);
   --AnonymousFontColor: rgb(7, 202, 0);
   --RememberBeNice: rgb(0, 206, 7);
@@ -51,13 +53,9 @@
   --SkillsLinePercentage: rgb(0, 113, 0);
   --InsideBoxShadows: 0px 0px 12px 4px rgb(0, 136, 14);
   --HoverBoxShadowsLight: 0px 0px 12px 4px rgb(2, 188, 45);
-  --BoxShadowsError404: 0px 0px 16px 18px rgb(0, 59, 9);
+  --BoxShadowsError404: 0px 0px 16px 18px rgb(0, 94, 14);
   --FontColor: rgb(0, 192, 0);
   --FontTextShadow: 1px 1px 8px green;
-  --BGImageMidContent2: url(./Components/Main-Sections/Mid-Content2/images/edited-CoverImageGreen.jpg);
-  --BGImageMidContent2Cropped: url(./Components/Main-Sections/Mid-Content2/images/edited-CoverImageGreenCropped.jpg);
-  --BGImageMainBottomContentCropped: url(./Components/Main-Sections/Bottom-Content/images/FlippedCroppedGreen2.jpg);
-  --BGImageBottomContent: url(./Router/MyContacts/Images/FlippedCroppedGreen.jpg);
   --GradientBGC: linear-gradient(
     to right,
     #122110,
@@ -76,6 +74,9 @@
 }
 
 #blue {
+  --hue-rotate-BGvideo: 240deg;
+  --hue-rotate-MidContent2: 240deg;
+  --hue-rotate-BottomContent: 240deg;
   --AnonymousFontColor: blue;
   --HeaderColor: rgb(2, 2, 32);
   --RememberBeNice: rgb(0, 18, 177);
@@ -83,7 +84,7 @@
   --BorderColors: 3px solid blue;
   --WebkitColorScroll: rgb(12, 0, 122);
   --BoxShadowsOnSections: 0px 0px 6px 6px rgb(9, 10, 67);
-  --BoxShadowsError404: 0px 0px 16px 18px rgb(9, 10, 67);
+  --BoxShadowsError404: 0px 0px 16px 18px rgb(1, 4, 151);
   --FooterButtonColor: blue;
   --SubmitBTN: rgb(0, 0, 114);
   --textShadow: 2px 2px 2px rgb(37, 37, 210);
@@ -97,10 +98,6 @@
   --HoverBoxShadowsLight: 0px 0px 12px 4px rgb(0, 20, 153);
   --FontColor: rgb(0, 68, 255);
   --FontTextShadow: 2px 2px 8px blue;
-  --BGImageMidContent2: url(./Components/Main-Sections/Mid-Content2/images/edited-CoverImageBlue.jpg);
-  --BGImageMidContent2Cropped: url(./Components/Main-Sections/Mid-Content2/images/edited-CoverImageBlueCropped.jpg);
-  --BGImageMainBottomContentCropped: url(./Components/Main-Sections/Bottom-Content/images/FlippedCroppedBlue2.jpg);
-  --BGImageBottomContent: url(./Router/MyContacts/Images/FlippedCroppedBlue.jpg);
   --GradientBGC: linear-gradient(
     to right,
     #0d0d0d,
@@ -182,6 +179,7 @@
   width: 100%;
   height: 100%;
   z-index: -100;
+
   .bg-vid {
     object-fit: cover;
     width: 100vw;
@@ -190,6 +188,7 @@
     top: 0;
     left: 0;
     z-index: -100;
+    filter: hue-rotate(var(--hue-rotate-BGvideo)) saturate(1.5) contrast(1.1);
   }
 }
 
@@ -197,14 +196,23 @@
   position: fixed;
   bottom: 150px;
   right: 30px;
-  background-color: black;
   width: 50px;
   height: 50px;
+  border-radius: 15px;
+  background-color: black;
   border-color: rgb(97, 96, 96);
   box-shadow: var(--InsideBoxShadows);
+  @media only screen and (max-width: 1000px) {
+    width: 42px;
+    height: 42px;
+  }
   .Sound-icon {
     color: var(--ButtonClose-Open);
     width: 40px;
     height: 40px;
+    @media only screen and (max-width: 1000px) {
+      width: 32px;
+      height: 32px;
+    }
   }
 }

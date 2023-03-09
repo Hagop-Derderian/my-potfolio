@@ -1,131 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap");
-#red {
-  $redforScrollbar: red;
-  --AnonymousFontColor: rgb(255, 0, 0);
-  --HeaderColor: rgb(53, 0, 0);
-  --HeaderBoxShadow: 0px 0px 13px 10px rgb(109, 12, 12);
-  --RememberBeNice: rgb(143, 0, 0);
-  --WebkitColorScroll: rgb(151, 0, 0);
-  --ButtonClose-Open: red;
-  --BorderColors: 3px solid red;
-  --BoxShadowsOnSections: 0px 0px 6px 6px rgb(62, 11, 11);
-  --BoxShadowsError404: 0px 0px 16px 18px rgb(87, 2, 2);
-  --SubmitBTN: rgb(123, 6, 6);
-  --SkillTitlesColor: rgb(243, 4, 4);
-  --SkillsIconsShadowBox: 0px 0px 7px 7px #4b0107;
-  --SkillsLineColor: rgb(142, 13, 13);
-  --SkillsLinePercentage: rgb(102, 0, 0);
-  --InsideBoxShadows: 0px 0px 12px 4px rgb(159, 0, 0);
-  --HoverBoxShadowsLight: 0px 0px 12px 4px rgb(185, 0, 0);
-  --FooterButtonColor: red;
-  --FontColor: red;
-  --FontTextShadow: 1px 1px 5px rgb(255, 0, 0);
-  --ProgressbarCircleBoxShadow: drop-shadow(0 0 5px rgb(154, 154, 154));
-  --BGImageMidContent2: url(./Components/Main-Sections/Mid-Content2/images/edited-CoverImage.jpg);
-  --BGImageMidContent2Cropped: url(./Components/Main-Sections/Mid-Content2/images/edited-CoverImageRedCropped.jpg);
-  --BGImageMainBottomContentCropped: url(./Components/Main-Sections/Bottom-Content/images/FlippedCroppedRed2.jpg);
-  --BGImageBottomContent: url(./Router/MyContacts/Images/FlippedCroppedRed.jpg);
-  --GradientBGC: radial-gradient(
-    circle,
-    #4a0707,
-    #3a090d,
-    #2a0a0e,
-    #1b050a,
-    #000000
-  );
-}
 
-#green {
-  --HeaderColor: rgb(1, 22, 0);
-  --AnonymousFontColor: rgb(7, 202, 0);
-  --RememberBeNice: rgb(0, 206, 7);
-  --ButtonClose-Open: green;
-  --FooterButtonColor: green;
-  --WebkitColorScroll: rgb(14, 120, 0);
-  --SubmitBTN: rgb(0, 105, 0);
-  --BorderColors: 3px solid green;
-  --HeaderBoxShadow: 0px 0px 13px 10px rgb(0, 70, 9);
-  --BoxShadowsOnSections: 0px 0px 6px 6px rgb(0, 79, 11);
-  --ProgressbarCircleBoxShadow: drop-shadow(0px 0px 7px rgb(193, 193, 193));
-  --SkillTitlesColor: rgb(3, 141, 24);
-  --SkillsIconsShadowBox: 0px 0px 7px 7px #005100;
-  --SkillsLineColor: rgb(3, 141, 10);
-  --SkillsLinePercentage: rgb(0, 113, 0);
-  --InsideBoxShadows: 0px 0px 12px 4px rgb(0, 136, 14);
-  --HoverBoxShadowsLight: 0px 0px 12px 4px rgb(2, 188, 45);
-  --BoxShadowsError404: 0px 0px 16px 18px rgb(0, 59, 9);
-  --FontColor: rgb(0, 192, 0);
-  --FontTextShadow: 1px 1px 8px green;
-  --BGImageMidContent2: url(./Components/Main-Sections/Mid-Content2/images/edited-CoverImageGreen.jpg);
-  --BGImageMidContent2Cropped: url(./Components/Main-Sections/Mid-Content2/images/edited-CoverImageGreenCropped.jpg);
-  --BGImageMainBottomContentCropped: url(./Components/Main-Sections/Bottom-Content/images/FlippedCroppedGreen2.jpg);
-  --BGImageBottomContent: url(./Router/MyContacts/Images/FlippedCroppedGreen.jpg);
-  --GradientBGC: linear-gradient(
-    to right,
-    #122110,
-    #132d11,
-    #123a11,
-    #11470f,
-    #0d550b,
-    #0d560a,
-    #0c5809,
-    #0c5908,
-    #0f4f0c,
-    #11450f,
-    #133b10,
-    #133211
-  );
-}
-
-#blue {
-  --AnonymousFontColor: blue;
-  --HeaderColor: rgb(2, 2, 32);
-  --RememberBeNice: rgb(0, 18, 177);
-  --ButtonClose-Open: blue;
-  --BorderColors: 3px solid blue;
-  --WebkitColorScroll: rgb(12, 0, 122);
-  --BoxShadowsOnSections: 0px 0px 6px 6px rgb(9, 10, 67);
-  --BoxShadowsError404: 0px 0px 16px 18px rgb(9, 10, 67);
-  --FooterButtonColor: blue;
-  --SubmitBTN: rgb(0, 0, 114);
-  --textShadow: 2px 2px 2px rgb(37, 37, 210);
-  --HeaderBoxShadow: 0px 0px 13px 10px rgb(6, 7, 88);
-  --ProgressbarCircleBoxShadow: drop-shadow(0 0 5px rgb(154, 154, 154));
-  --SkillTitlesColor: rgb(22, 61, 233);
-  --SkillsIconsShadowBox: 0px 0px 7px 7px #030b5e;
-  --SkillsLineColor: rgb(0, 9, 108);
-  --SkillsLinePercentage: rgb(0, 11, 133);
-  --InsideBoxShadows: 0px 0px 12px 4px rgb(1, 15, 105);
-  --HoverBoxShadowsLight: 0px 0px 12px 4px rgb(0, 20, 153);
-  --FontColor: rgb(0, 68, 255);
-  --FontTextShadow: 2px 2px 8px blue;
-  --BGImageMidContent2: url(./Components/Main-Sections/Mid-Content2/images/edited-CoverImageBlue.jpg);
-  --BGImageMidContent2Cropped: url(./Components/Main-Sections/Mid-Content2/images/edited-CoverImageBlueCropped.jpg);
-  --BGImageMainBottomContentCropped: url(./Components/Main-Sections/Bottom-Content/images/FlippedCroppedBlue2.jpg);
-  --BGImageBottomContent: url(./Router/MyContacts/Images/FlippedCroppedBlue.jpg);
-  --GradientBGC: linear-gradient(
-    to right,
-    #0d0d0d,
-    #13121d,
-    #15162c,
-    #15193b,
-    #121d4b,
-    #121d4b,
-    #131e4c,
-    #131e4c,
-    #171a3c,
-    #17172d,
-    #15131e,
-    #0f0f0f
-  );
-}
 body {
+  max-width: 1920px;
   padding: 0;
   margin: 0;
   font-family: "Marcellus", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
   &::-webkit-scrollbar {
     height: 100%;
     width: 15px;
@@ -138,7 +21,6 @@ body {
   }
   &::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    // background-color: rgb(41, 32, 32);
     background-image: linear-gradient(
       to bottom,
       rgb(76, 0, 0),
@@ -150,9 +32,7 @@ body {
   &::-webkit-scrollbar-thumb:hover {
     box-shadow: 0px 0px 10px 4px rgb(117, 117, 117);
   }
-  &:hover {
-    box-shadow: 0px 0px 10px 4px rgb(117, 117, 117);
-  }
+
   &:focus {
     outline: none;
     box-shadow: 0px 0px 10px 4px rgb(117, 117, 117);

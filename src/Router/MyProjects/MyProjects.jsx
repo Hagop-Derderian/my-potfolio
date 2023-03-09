@@ -54,7 +54,6 @@ function MyProjects() {
             <h2>Wix Project</h2>
             <img src={Wix} alt="wix" />
             <button>
-              {" "}
               <a
                 href={"https://pocketcodeofficial.github.io/WIX/"}
                 target={"_blank"}

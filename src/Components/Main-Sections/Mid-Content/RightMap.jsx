@@ -1,30 +1,35 @@
 import React from "react";
 import RightComponent from "./RightComponent";
-import { DiJavascript } from "react-icons/di";
-import { SiRedux, SiSass, SiAdobephotoshop } from "react-icons/si";
+
+import {
+  SiRedux,
+  SiSass,
+  SiAdobephotoshop,
+  SiAdobepremierepro,
+} from "react-icons/si";
 
 function RightMap() {
   const title = [
     {
       title: "SASS",
       absolute: "0%",
-      percentage: "90%",
-      width: "90%",
+      percentage: "87%",
+      width: "87%",
       icon: <SiSass className="right-icon" />,
     },
     {
       title: "REDUX",
       absolute: "0%",
-      percentage: "90%",
-      width: "90%",
+      percentage: "50%",
+      width: "50%",
       icon: <SiRedux className="right-icon" />,
     },
     {
-      title: "JS DOM",
+      title: "Premiere",
       absolute: "0%",
       percentage: "80%",
       width: "80%",
-      icon: <DiJavascript className="right-icon" />,
+      icon: <SiAdobepremierepro className="right-icon-photoshop" />,
     },
     {
       title: "Photoshop",

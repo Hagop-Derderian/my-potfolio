@@ -22,22 +22,27 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
-      background-image: var(--BGImageMidContent2);
+      background-image: url(./images/edited-CoverImage.jpg);
+      filter: hue-rotate(var(--hue-rotate-MidContent2)) saturate(2)
+        contrast(1.3);
       @media only screen and (max-width: 1100px) {
         background-position: center;
-        background-image: var(--BGImageMidContent2Cropped);
+        background-image: url(./images/edited-CoverImageRedCropped.jpg);
       }
     }
     .div-aboutMe {
       display: flex;
       flex-direction: column;
-      justify-content: center;
       text-align: center;
       width: 50%;
       height: 100%;
       position: absolute;
       right: 0;
+      padding: 20px;
       background-color: rgba(14, 11, 11, 0.5);
+      @media only screen and (max-width: 1130px) {
+        padding: 10px;
+      }
       @media only screen and (max-width: 1100px) {
         width: 100%;
       }
@@ -51,7 +56,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 0px 40px;
+      padding: 0px 30px;
       text-shadow: 0px 0px 4px;
       color: var(--FontColor);
       @media only screen and (max-width: 520px) {
@@ -66,7 +71,7 @@
         font-size: 50px;
         margin: 0;
         white-space: nowrap;
-        @media only screen and (max-width: 1400px) {
+        @media only screen and (max-width: 1350px) {
           font-size: 45px;
         }
         @media only screen and (max-width: 1300px) {
@@ -79,6 +84,9 @@
           font-size: 32px;
           white-space: unset;
         }
+        @media only screen and (max-width: 450px) {
+          font-size: 30px;
+        }
       }
       h2 {
         margin: 0;
@@ -86,15 +94,14 @@
       p {
         font-size: 23px;
         text-align: center;
-        margin-left: 40px;
         @media only screen and (max-width: 1100px) {
           margin-left: 0;
         }
-        @media only screen and (max-width: 500px) {
-          font-size: 20px;
+        @media only screen and (max-width: 555px) {
+          font-size: 19px;
         }
         @media only screen and (max-width: 375px) {
-          font-size: 19px;
+          font-size: 17px;
         }
       }
     }
@@ -108,28 +115,38 @@
       height: 300px;
       text-shadow: 0px 0px 4px;
       color: var(--FontColor);
-
+      @media screen and (max-width: 1400px) {
+        height: 250px;
+      }
       .div-ul {
         display: flex;
         height: 100%;
         justify-content: center;
         @media only screen and (max-width: 1100px) {
           margin: 0 auto;
+          height: 100%;
         }
         @media only screen and (max-width: 500px) {
           justify-content: center;
+          height: 200px;
         }
         .left-ul {
           @media only screen and (max-width: 500px) {
             padding-left: 20px;
+            margin-top: 5px;
           }
           @media only screen and (max-width: 380px) {
             padding-left: 0px;
+            height: 90%;
           }
         }
         .right-ul {
+          @media only screen and (max-width: 1150px) {
+            padding-left: 10px;
+          }
           @media only screen and (max-width: 500px) {
             padding-left: 5px;
+            margin-top: 5px;
           }
         }
         li {
@@ -137,11 +154,18 @@
           margin-bottom: 10px;
           padding-bottom: 10px;
           border-bottom: 1px solid rgb(58, 33, 33);
-          @media only screen and (max-width: 500px) {
+
+          @media only screen and (max-width: 530px) {
             font-size: 22px;
           }
-          @media only screen and (max-width: 410px) {
+          @media only screen and (max-width: 470px) {
             font-size: 20px;
+          }
+          @media only screen and (max-width: 430px) {
+            font-size: 18px;
+          }
+          @media only screen and (max-width: 380px) {
+            font-size: 17px;
           }
         }
       }
@@ -161,6 +185,33 @@
           background-repeat: no-repeat;
           background-image: url(./images/fb-logo-black.jpg);
           box-shadow: var(--InsideBoxShadows);
+          @media screen and (max-width: 1400px) {
+            width: 45px;
+            height: 45px;
+          }
+          @media only screen and (max-width: 1100px) {
+            width: 60px;
+            height: 60px;
+            margin-top: 30px;
+          }
+          @media only screen and (max-width: 700px) {
+            width: 45px;
+            height: 45px;
+            margin-top: 30px;
+          }
+          @media only screen and (max-width: 570px) {
+            margin-top: 0;
+          }
+          @media only screen and (max-width: 555px) {
+            margin-top: 20px;
+          }
+          @media only screen and (max-width: 440px) {
+            margin-top: 10px;
+          }
+          @media only screen and (max-width: 440px) {
+            margin-top: 0;
+          }
+
           &:hover {
             transform: scale(1.3) rotate(-20deg);
             transition: 800ms;
@@ -170,13 +221,38 @@
         .Second-logo {
           width: 50px;
           height: 50px;
-
           border-radius: 10px;
           background-position: center;
           background-size: cover;
           background-repeat: no-repeat;
           box-shadow: var(--InsideBoxShadows);
           background-image: url(./images/insta-logo-black.jpg);
+          @media screen and (max-width: 1400px) {
+            width: 45px;
+            height: 45px;
+          }
+          @media only screen and (max-width: 1100px) {
+            width: 60px;
+            height: 60px;
+            margin-top: 30px;
+          }
+          @media only screen and (max-width: 700px) {
+            width: 45px;
+            height: 45px;
+            margin-top: 30px;
+          }
+          @media only screen and (max-width: 570px) {
+            margin-top: 0;
+          }
+          @media only screen and (max-width: 555px) {
+            margin-top: 20px;
+          }
+          @media only screen and (max-width: 440px) {
+            margin-top: 10px;
+          }
+          @media only screen and (max-width: 440px) {
+            margin-top: 0;
+          }
           &:hover {
             transform: scale(1.3);
             transition: 800ms;
@@ -192,6 +268,32 @@
           background-repeat: no-repeat;
           box-shadow: var(--InsideBoxShadows);
           background-image: url(./images/images.png);
+          @media screen and (max-width: 1400px) {
+            width: 45px;
+            height: 45px;
+          }
+          @media only screen and (max-width: 1100px) {
+            width: 60px;
+            height: 60px;
+            margin-top: 30px;
+          }
+          @media only screen and (max-width: 700px) {
+            width: 45px;
+            height: 45px;
+            margin-top: 30px;
+          }
+          @media only screen and (max-width: 570px) {
+            margin-top: 0;
+          }
+          @media only screen and (max-width: 555px) {
+            margin-top: 20px;
+          }
+          @media only screen and (max-width: 440px) {
+            margin-top: 10px;
+          }
+          @media only screen and (max-width: 440px) {
+            margin-top: 0;
+          }
           &:hover {
             transform: scale(1.3) rotate(20deg);
             transition: 800ms;

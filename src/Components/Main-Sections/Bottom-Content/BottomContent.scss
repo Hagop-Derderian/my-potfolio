@@ -28,12 +28,13 @@
       top: 0;
       bottom: 0;
       opacity: 0.8;
-      background-image: var(--BGImageBottomContent);
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+      background-image: url(./images/FlippedCroppedRed.jpg);
+      filter: hue-rotate(var(--hue-rotate-BottomContent)) saturate(1.5);
       @media screen and (max-width: 1100px) {
-        background-image: var(--BGImageMainBottomContentCropped);
+        background-image: url(./images/FlippedCroppedRed2.jpg);
       }
     }
 

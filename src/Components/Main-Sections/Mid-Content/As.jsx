@@ -27,28 +27,11 @@ function As() {
     <>
       <div className="container">
         <div className="for-progressBar">
-          <div className="progressbar-title">
-            <div className="progressbar" ref={hiddenRef}>
-              <svg className="progressbar__svg">
-                <circle
-                  cx="80"
-                  cy="80"
-                  r="70"
-                  className="progressbar__svg-circle1 circle-react shadow-react"
-                  style={{
-                    animation:
-                      data === true
-                        ? `anim_circle-react 3s ease-in-out forwards`
-                        : "",
-                  }}
-                ></circle>
-              </svg>
-              <span className="progressbar__text shadow-react">60%</span>
-            </div>
-            <span className="Name-third">SASS / CSS</span>
-          </div>
-
-          <div className="progressbar-title ">
+          <div
+            data-aos-duration="1000"
+            data-aos="zoom-in"
+            className="progressbar-title "
+          >
             <div className="progressbar" ref={hiddenRef2}>
               <svg className="progressbar__svg">
                 <circle
@@ -64,12 +47,41 @@ function As() {
                   }}
                 ></circle>
               </svg>
-              <span className="progressbar__text shadow-react">90%</span>
+              <span className="progressbar__text shadow-react">80%</span>
             </div>
             <span className="Name-second">Javascript / React</span>
           </div>
 
-          <div className="progressbar-title">
+          <div
+            data-aos-duration="1000"
+            data-aos="zoom-in"
+            className="progressbar-title"
+          >
+            <div className="progressbar" ref={hiddenRef}>
+              <svg className="progressbar__svg">
+                <circle
+                  cx="80"
+                  cy="80"
+                  r="70"
+                  className="progressbar__svg-circle1 circle-react shadow-react"
+                  style={{
+                    animation:
+                      data === true
+                        ? `anim_circle-react 3s ease-in-out forwards`
+                        : "",
+                  }}
+                ></circle>
+              </svg>
+              <span className="progressbar__text shadow-react">90%</span>
+            </div>
+            <span className="Name-third">Photoshop/Premiere</span>
+          </div>
+
+          <div
+            data-aos-duration="1000"
+            data-aos="zoom-in"
+            className="progressbar-title"
+          >
             <div className="progressbar" ref={hiddenRef3}>
               <svg className="progressbar__svg">
                 <circle
@@ -85,7 +97,7 @@ function As() {
                   }}
                 ></circle>
               </svg>
-              <span className="progressbar__text shadow-react">100%</span>
+              <span className="progressbar__text shadow-react">95%</span>
             </div>
 
             <span className="Name-first">HTML / CSS</span>

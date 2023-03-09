@@ -28,7 +28,9 @@ function RightComponent(props) {
         </div>
       </div>
 
-      <h3 className="right-h3">{props.percentage}</h3>
+      <h3 data-aos="zoom-in-up" className="right-h3">
+        {props.percentage}
+      </h3>
     </div>
   );
 }

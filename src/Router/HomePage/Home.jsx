@@ -6,15 +6,13 @@ import Bottomcontent from "../../Components/Main-Sections/Bottom-Content/BottomC
 
 import { useRef } from "react";
 function Home() {
-
-
   const ref = useRef(null);
   return (
     <>
       <Topcontent x={ref} />
       <Midcontent x={ref} />
       <Midcontent2 />
-      <Bottomcontent /> 
+      <Bottomcontent />
     </>
   );
 }

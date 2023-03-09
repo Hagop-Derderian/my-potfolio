@@ -14,15 +14,15 @@ function LeftMap() {
     {
       title: "CSS",
       absolute: "0%",
-      percentage: "90%",
-      width: "90%",
+      percentage: "85%",
+      width: "85%",
       icon: <DiCss3 className="left-icon" />,
     },
     {
       title: "JAVASCRIPT",
       absolute: "0%",
-      percentage: "80%",
-      width: "80%",
+      percentage: "70%",
+      width: "70%",
       icon: <DiJavascript className="left-icon" />,
     },
     {

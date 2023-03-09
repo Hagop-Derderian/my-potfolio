@@ -31,7 +31,9 @@ function LeftComponent(props) {
         </div>
       </div>
 
-      <h3 className="left-h3">{props.percentage}</h3>
+      <h3 data-aos="zoom-in-up" className="left-h3">
+        {props.percentage}
+      </h3>
     </div>
   );
 }
